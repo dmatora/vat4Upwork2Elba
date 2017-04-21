@@ -114,7 +114,7 @@ class EarningsWriter(TransactionWriter):
         print('-' * max(len(self.name), 4))
 
     def do_write_before(self, date_str, info):
-        print(date_str)
+        print('{}\t 1 USD = {} RUB'.format(date_str, info['rate']))
         self.offset = ' ' * len(date_str)
 
     def do_write(self, date_str, item):
