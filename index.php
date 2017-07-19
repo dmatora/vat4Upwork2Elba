@@ -65,6 +65,7 @@ function getFromCache($url, $code) {
             $array[13] = $roublesWithNds;
             $array[14] = $nds;
             $array[15] = '<button onclick="$(this).parent().parent().hide()">Скрыть</button>';
+            $array[16] = "<textarea>$('#Date').val('{$array[11]}');$('#OperationTypeSelect_Caption').click();$('#OperationTypeSelect_Options li[key=7]').click();$('#FromContractor_ContractorName').focus().val('Upwork Global Inc.');$('#InvoiceItemsTable_row0_NdsRateSelect_Caption').click();$('#InvoiceItemsTable_row0_NdsRateSelect_Options div[key=3]').click();$('#SumWithNdsView').prop('checked', true).click();$('#InvoiceItemsTable_row0_Name').val('{$array[3]}');$('#InvoiceItemsTable_row0_Price').focus().val('{$array[12]}');$('#InvoiceItemsTable_row0_Sum').focus().val('{$array[13]}');setTimeout(function(){ $('#InvoiceItemsTable_row0_Sum').change(); }, 100)</textarea>";
             $ndsTotal += $nds;
             $ndsTotalString .= '+'.$nds;
             echo '<tr><td>'.implode('</td><td>',$array).'</td></tr>';
