@@ -4,7 +4,7 @@ function getValue($xml) {
     $cbr = simplexml_load_string($xml);
     foreach ($cbr->Valute as $valute) {
         if ($valute->CharCode == 'USD') {
-			$valuteValue = (float) str_replace(',', '.', $valute->Value);
+            $valuteValue = (float) str_replace(',', '.', $valute->Value);
             break;
         }
     }
@@ -28,17 +28,17 @@ function getFromCache($url, $code) {
         <style>td {padding: 0 10px 0 10px }</style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <table><?php
-		
+        
         $ndsTotal=0; 
         $ndsTotalString='';
 
         foreach ($data as $string) {
             if (empty($string)) continue;
             $array = str_getcsv($string);
-			
+            
             if (empty($array) | !is_array($array)) continue;
-            if (!(count($array)>=10)) continue; 			
-			
+            if (!(count($array)>=10)) continue; 
+            
             unset($array[4]);
             unset($array[5]);
             unset($array[6]);
